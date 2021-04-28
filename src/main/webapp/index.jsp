@@ -10,7 +10,14 @@ Class.forName("org.postgresql.Driver");
 
 String url = System.getenv("DATABASE_URL");
 
-Connection c = DriverManager.getConnection("jdbc:"+url);
+String user = System.getenv("BD_USER");
+String pass = System.getenv("BD_PASS");
+String conexao = System.getenv("BD_URL");
+
+
+
+
+Connection c = DriverManager.getConnection(conexao,user,pass);
 %>
 
 <%=c.getMetaData().getDatabaseProductName() %><br>
