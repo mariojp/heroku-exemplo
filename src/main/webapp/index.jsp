@@ -1,5 +1,8 @@
+<%@page import="java.sql.DriverManager"%>
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>NOVO!</h2>
+
+<%=System.getenv("URI")%>
 </body>
 </html>
