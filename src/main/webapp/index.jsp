@@ -5,6 +5,9 @@
 <h2>NOVO!</h2>
 
 <%
+
+Class.forName("org.postgresql.Driver");
+
 String url = System.getenv("DATABASE_URL");
 
 Connection c = DriverManager.getConnection(url);
